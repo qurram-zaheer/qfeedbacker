@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const User = mongoose.model("Users");
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  done(null, user);
 });
 passport.deserializeUser((id, done) => {
   User.findById(id).then(user => {
@@ -27,7 +27,10 @@ passport.use(
       if (existingUser) {
         return done(null, existingUser);
       }
-      const user = await new User({ googleId: profile.id }).save();
+      const user = await new User({
+        googleId: profile.id,
+        name: profile.name.givenName
+      }).save();
       done(null, user);
     }
   )

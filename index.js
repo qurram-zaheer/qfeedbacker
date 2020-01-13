@@ -4,6 +4,7 @@ const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 require("./models/User");
+require("./models/Survey");
 require("./services/passport");
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(passport.session());
 mongoose.connect(keys.mongoURI);
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   //Serve up main.js or main.css

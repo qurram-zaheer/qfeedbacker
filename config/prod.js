@@ -12,5 +12,7 @@ module.exports = {
   googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   cookieKey: process.env.COOKIE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  strikeSecretKey: process.env.STRIPE_SECRET_KEY
+  strikeSecretKey: process.env.STRIPE_SECRET_KEY,
+  mailGunKey: process.env.MAIL_GUN_KEY,
+  mailGunDomain: process.env.MAIL_GUN_DOMAIN
 };

@@ -4,14 +4,9 @@ import Header from "./Header";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import Landing from "./Landing";
-
-const Dashboard = () => {
-  return <h2>DASHBOARD</h2>;
-};
-
-const SurveyNew = () => {
-  return <h2>SURVEY NEW</h2>;
-};
+import Dashboard from "./Dashboard";
+import "../App.css";
+import SurveyNew from "./surveys/SurveyNew";
 
 class App extends React.Component {
   componentDidMount() {
@@ -19,16 +14,14 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <BrowserRouter>
-          <div>
-            <Header />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
-            <Route path="/surveys/new" component={SurveyNew} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/surveys" component={Dashboard} />
+          <Route path="/surveys/new" component={SurveyNew} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

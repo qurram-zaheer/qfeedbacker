@@ -13,6 +13,8 @@ module.exports = {
   cookieKey: process.env.COOKIE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   strikeSecretKey: process.env.STRIPE_SECRET_KEY,
-  mailGunKey: process.env.MAIL_GUN_KEY,
-  mailGunDomain: process.env.MAIL_GUN_DOMAIN
+  // mailGunKey: process.env.MAIL_GUN_KEY,
+  // mailGunDomain: process.env.MAIL_GUN_DOMAIN
+  sendGridKey: process.env.SEND_GRID_KEY,
+  redirectDomain: process.env.REDIRECT_DOMAIN
 };

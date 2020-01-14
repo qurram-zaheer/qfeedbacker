@@ -13,7 +13,7 @@ class Payments extends Component {
         name="qFeedbacker"
         description="Add credits to your account"
       >
-        <button className="btn deep-purple lighten-2">Add credits</button>
+        <button className="btn grow deep-purple lighten-2">Add credits</button>
       </StripeCheckout>
     );
   }

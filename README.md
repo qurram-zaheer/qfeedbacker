@@ -8,6 +8,8 @@ qFeedbacker is a webapp that sends out batch survey emails, with integrated webh
 -Express for the backend, powered by Passport.js for Google OAuth<br>
 -SendGrid for sending out emails and integrating webhooks<br>
 -Stripe to facilitate payments<br>
--Redux and Redux form to manage frontend states and survey form states respectively
+-Redux and Redux form to manage frontend states and survey form states respectively<br>
+-React.js for frontend of the webapp
+
        
        

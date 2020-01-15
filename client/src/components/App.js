@@ -12,12 +12,18 @@ class App extends React.Component {
   componentDidMount() {
     this.props.fetchUser();
   }
+
   render() {
     return (
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path="/" component={Landing} />
+          <Route
+            exact
+            path="/"
+            render={props => <Landing {...props} auth={this.props.auth} />}
+          />
+
           <Route exact path="/surveys" component={Dashboard} />
           <Route path="/surveys/new" component={SurveyNew} />
         </div>
@@ -26,4 +32,10 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, actions)(App);
+function mapStateToProps({ auth }) {
+  return {
+    auth
+  };
+}
+
+export default connect(mapStateToProps, actions)(App);

@@ -19,16 +19,31 @@ class SurveyList extends Component {
               Sent on: {new Date(survey.dateSent).toLocaleDateString()}
             </p>
           </div>
-          <div className="card-action">
-            <a href="">Yes: {survey.yes}</a>
-            <a href="">No: {survey.no}</a>
+          <div className="card-action blue-grey lighten-4">
+            <a style={{ color: "darkblue" }} href="">
+              Yes: {survey.yes}
+            </a>
+            <a style={{ color: "maroon" }} href="">
+              No: {survey.no}
+            </a>
           </div>
         </div>
       );
     });
   }
   render() {
-    return <div>{this.renderSurveys()}</div>;
+    return (
+      <div>
+        <nav className="teal" style={{ paddingBottom: "40px" }}>
+          <div className="nav-wrapper">
+            <h5 style={{ paddingTop: "20px", paddingLeft: "15px" }}>
+              Your surveys:
+            </h5>
+          </div>
+        </nav>
+        {this.renderSurveys()}
+      </div>
+    );
   }
 }
 

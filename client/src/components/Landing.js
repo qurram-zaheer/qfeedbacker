@@ -22,7 +22,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h4>qFeedbacker</h4>
+        <h4>Feedbacker</h4>
         <h6>Feedback made convenient!</h6>
         <div className="row" style={{ paddingTop: "30px" }}>
           <div className="col s4">

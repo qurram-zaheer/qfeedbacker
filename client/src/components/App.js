@@ -24,7 +24,11 @@ class App extends React.Component {
             render={props => <Landing {...props} auth={this.props.auth} />}
           />
 
-          <Route exact path="/surveys" component={Dashboard} />
+          <Route
+            exact
+            path="/surveys"
+            render={props => <Dashboard {...props} auth={this.props.auth} />}
+          />
           <Route path="/surveys/new" component={SurveyNew} />
         </div>
       </BrowserRouter>

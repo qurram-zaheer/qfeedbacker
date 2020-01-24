@@ -1,11 +1,13 @@
 import React from "react";
 import SurveyList from "./surveys/SurveyList";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const Dashboard = props => {
   return (
     <div className="container">
       <SurveyList />
+
       <div className="fixed-action-btn">
         <Link
           to="/surveys/new"
@@ -19,4 +21,10 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+function mapStateToProps({ auth }) {
+  return {
+    auth
+  };
+}
+
+export default connect(mapStateToProps)(Dashboard);

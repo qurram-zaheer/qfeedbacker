@@ -20,6 +20,7 @@ class Header extends Component {
             <li>
               <Payments />
             </li>
+            <li style={{ margin: "0 10px" }}>Hi, {this.props.auth.name}</li>
             <li style={{ margin: "0 10px" }}>
               Credits: {this.props.auth.credits}
             </li>
@@ -39,7 +40,7 @@ class Header extends Component {
             className="left brand-logo"
             style={{ paddingLeft: "10px" }}
           >
-            qFeedbacker
+            Feedbacker
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </nav>

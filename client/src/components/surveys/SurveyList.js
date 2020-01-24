@@ -8,7 +8,6 @@ class SurveyList extends Component {
   }
 
   renderSurveys() {
-    console.log(this.props.survey);
     return this.props.surveys.reverse().map(survey => {
       return (
         <div className="card darken-1 " key={survey._id}>
@@ -31,14 +30,13 @@ class SurveyList extends Component {
       );
     });
   }
+
   render() {
     return (
       <div>
         <nav className="teal" style={{ paddingBottom: "40px" }}>
           <div className="nav-wrapper">
-            <h5 style={{ paddingTop: "20px", paddingLeft: "15px" }}>
-              Your surveys:
-            </h5>
+            <h5 style={{ paddingTop: "20px", paddingLeft: "15px" }}></h5>
           </div>
         </nav>
         {this.renderSurveys()}
@@ -47,7 +45,7 @@ class SurveyList extends Component {
   }
 }
 
-function mapStateToProps({ surveys }) {
-  return { surveys };
+function mapStateToProps({ surveys, auth }) {
+  return { surveys, auth };
 }
 export default connect(mapStateToProps, { fetchSurveys })(SurveyList);

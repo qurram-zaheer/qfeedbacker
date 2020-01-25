@@ -22,8 +22,8 @@ class Landing extends React.Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h4>Feedbacker</h4>
-        <h6>Feedback made convenient!</h6>
+        <h2>Feedbacker</h2>
+
         <div className="row" style={{ paddingTop: "30px" }}>
           <div className="col s4">
             <div className="card z-depth-0 " style={{ width: "100%" }}>
